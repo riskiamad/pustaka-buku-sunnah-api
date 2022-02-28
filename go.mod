@@ -14,8 +14,8 @@ require (
 require github.com/russross/blackfriday v2.0.0+incompatible
 
 require (
-	github.com/jackc/pgconn v1.10.1 // indirect
-	github.com/jackc/pgtype v1.9.1 // indirect
+	github.com/jackc/pgconn v1.11.0 // indirect
+	github.com/jackc/pgtype v1.10.0 // indirect
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
 )
 
