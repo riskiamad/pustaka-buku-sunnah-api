@@ -7,7 +7,6 @@ import (
 	"pustaka-buku-sunnah-api/handler"
 
 	"github.com/gin-gonic/gin"
-	"github.com/russross/blackfriday"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -34,7 +33,7 @@ func main() {
 	v1.PUT("/books/:id", (*bookHandler).UpdateBook)
 	v1.DELETE("/books/:id", (*bookHandler).DeleteBook)
 	v1.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, string(blackfriday.Run([]byte("You are accessing the server side, please visit the client side https://pustaka-cli.herokuapp.com/ or the repository for documentation on https://github.com/riskiamad/pustaka-buku-sunnah-api"))))
+		c.String(http.StatusOK, "You are accessing the server side, please visit the client side https://pustaka-cli.herokuapp.com/ or the repository for documentation on https://github.com/riskiamad/pustaka-buku-sunnah-api")
 	})
 
 	router.Run()
