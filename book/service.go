@@ -1,5 +1,7 @@
 package book
 
+import "log"
+
 type Service interface {
 	FindAll() ([]BookModel, error)
 	FindByID(ID int) (BookModel, error)
@@ -41,6 +43,9 @@ func (s *service) Create(bookRequest BookRequest) (BookModel, error) {
 
 func (s *service) Update(ID int, bookRequest BookRequest) (BookModel, error) {
 	book, err := s.repository.FindByID(ID)
+	if err != nil {
+		log.Fatalln(err)
+	}
 
 	book.Title = bookRequest.Title
 	book.Price = int(bookRequest.Price.(float64))
@@ -54,6 +59,9 @@ func (s *service) Update(ID int, bookRequest BookRequest) (BookModel, error) {
 
 func (s *service) Delete(ID int) (BookModel, error) {
 	book, err := s.repository.FindByID(ID)
+	if err != nil {
+		log.Fatalln(err)
+	}
 
 	newBook, err := s.repository.Delete(book)
 	return newBook, err

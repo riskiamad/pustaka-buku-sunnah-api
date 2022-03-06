@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 	"net/http"
-	"pustaka-buku-sunnah-api/controller"
-	book "pustaka-buku-sunnah-api/models"
+	"pustaka-buku-sunnah-api/book"
+	"pustaka-buku-sunnah-api/handler"
 
 	"github.com/gin-gonic/gin"
 	"github.com/russross/blackfriday"
@@ -23,7 +23,7 @@ func main() {
 
 	bookRepository := book.NewRepository(db)
 	bookService := book.NewService(bookRepository)
-	bookHandler := controller.NewBookHandler(bookService)
+	bookHandler := handler.NewBookHandler(bookService)
 
 	router := gin.Default()
 
@@ -33,8 +33,8 @@ func main() {
 	v1.GET("/books/:id", (*bookHandler).GetBook)
 	v1.PUT("/books/:id", (*bookHandler).UpdateBook)
 	v1.DELETE("/books/:id", (*bookHandler).DeleteBook)
-	v1.GET("/mark", func(c *gin.Context) {
-		c.String(http.StatusOK, string(blackfriday.Run([]byte("**hi!**"))))
+	v1.GET("/", func(c *gin.Context) {
+		c.String(http.StatusOK, string(blackfriday.Run([]byte("You are accessing the server side, please visit the client side https://pustaka-cli.herokuapp.com/ or the repository for documentation on https://github.com/riskiamad/pustaka-buku-sunnah-api"))))
 	})
 
 	router.Run()

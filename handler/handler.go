@@ -1,9 +1,9 @@
-package controller
+package handler
 
 import (
 	"fmt"
 	"net/http"
-	book "pustaka-buku-sunnah-api/models"
+	"pustaka-buku-sunnah-api/book"
 	"strconv"
 
 	"github.com/gin-gonic/gin"
@@ -97,7 +97,16 @@ func (h *bookHandler) GetBooks(c *gin.Context) {
 	var booksResponse []book.BookResponse
 
 	for _, b := range books {
-		bookResponse := convertToBookResponse(b)
+		discountPrice := b.Price - (b.Price * b.Discount / 100)
+		bookResponse := book.BookResponse{
+			ID:            b.ID,
+			Title:         b.Title,
+			Description:   b.Description,
+			Price:         b.Price,
+			Discount:      b.Discount,
+			Rating:        b.Rating,
+			DiscountPrice: discountPrice,
+		}
 
 		booksResponse = append(booksResponse, bookResponse)
 	}
@@ -152,12 +161,14 @@ func (h *bookHandler) DeleteBook(c *gin.Context) {
 }
 
 func convertToBookResponse(b book.BookModel) book.BookResponse {
+	discountPrice := b.Price - (b.Price * b.Discount / 100)
 	return book.BookResponse{
-		ID:          b.ID,
-		Title:       b.Title,
-		Description: b.Description,
-		Price:       b.Price,
-		Discount:    b.Discount,
-		Rating:      b.Rating,
+		ID:            b.ID,
+		Title:         b.Title,
+		Description:   b.Description,
+		Price:         b.Price,
+		Discount:      b.Discount,
+		Rating:        b.Rating,
+		DiscountPrice: discountPrice,
 	}
 }
