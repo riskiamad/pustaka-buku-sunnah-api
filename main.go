@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"net/http"
 	"pustaka-buku-sunnah-api/book"
 	"pustaka-buku-sunnah-api/handler"
 
@@ -32,9 +31,6 @@ func main() {
 	v1.GET("/books/:id", (*bookHandler).GetBook)
 	v1.PUT("/books/:id", (*bookHandler).UpdateBook)
 	v1.DELETE("/books/:id", (*bookHandler).DeleteBook)
-	v1.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "You are accessing the server side, please visit the client side https://pustaka-cli.herokuapp.com/ or the repository for documentation on https://github.com/riskiamad/pustaka-buku-sunnah-api")
-	})
 
 	router.Run()
 }
