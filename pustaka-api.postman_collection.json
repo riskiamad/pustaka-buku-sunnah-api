@@ -1,0 +1,531 @@
+{
+	"info": {
+		"_postman_id": "1233e8fd-0bd3-47ab-b0dc-cb501c2d1e66",
+		"name": "pustaka-api",
+		"description": "API service for book store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find All Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.iamrisk.my.id/v1/books",
+					"protocol": "https",
+					"host": [
+						"api",
+						"iamrisk",
+						"my",
+						"id"
+					],
+					"path": [
+						"v1",
+						"books"
+					]
+				},
+				"description": "Return all books record"
+			},
+			"response": [
+				{
+					"name": "Find All Books",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.iamrisk.my.id/v1/books",
+							"protocol": "https",
+							"host": [
+								"api",
+								"iamrisk",
+								"my",
+								"id"
+							],
+							"path": [
+								"v1",
+								"books"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 17 Mar 2022 15:27:42 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=aH3nmvXg%2Fvz9zf61i%2Fne5ji%2BzdokJgCp1LEUKqMgST%2BTKMykIrOF%2FEWejT5Fz55%2FzAjZ4XntZz2PenU8hxlYNQ3LMq6eYoq54xK5ymEZo1OIciIFOHTvXFrIQ9l9%2BXdUgVQv8Q%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "6ed6c1124e62497b-SIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Mulia Dengan Manhaj Salaf\",\n            \"description\": \"Rekomendasi untuk kamu yang ingin belajar agama\",\n            \"price\": 95000,\n            \"discount\": 30,\n            \"rating\": 10,\n            \"discountPrice\": 66500\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Kitab Tauhid\",\n            \"description\": \"Tauhid merupakan amalan yang paling utama\",\n            \"price\": 80000,\n            \"discount\": 20,\n            \"rating\": 9,\n            \"discountPrice\": 64000\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Amalan Sunnah Dalam Setahun\",\n            \"description\": \"Dengan mempelajari apa saja amalan - amalan yang di sunnahkan, agar dapat di amalkan sesuai dengan apa yang Rasulullah ajarkan\",\n            \"price\": 120000,\n            \"discount\": 10,\n            \"rating\": 8,\n            \"discountPrice\": 108000\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Find Book By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.iamrisk.my.id/v1/books/1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"iamrisk",
+						"my",
+						"id"
+					],
+					"path": [
+						"v1",
+						"books",
+						"1"
+					]
+				},
+				"description": "return one record of book data for specified id"
+			},
+			"response": [
+				{
+					"name": "Find Book By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.iamrisk.my.id/v1/books/1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"iamrisk",
+								"my",
+								"id"
+							],
+							"path": [
+								"v1",
+								"books",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 17 Mar 2022 15:29:51 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=xag55TO9%2BgztGShKHdKuutsj52vB0vO6NwDfrMNP1p%2FbxxJDTSJQxewlhW%2FOSoRpwU4qWyCA3HEvdgUgGAJ63VqMioXBJOAp%2BHiNrN8rCgE%2B856YVUnPcHv4VWQT1xdlNCW4ww%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "6ed6c43a6d74497b-SIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Mulia Dengan Manhaj Salaf\",\n        \"description\": \"Rekomendasi untuk kamu yang ingin belajar agama\",\n        \"price\": 95000,\n        \"discount\": 30,\n        \"rating\": 10,\n        \"discountPrice\": 66500\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Add New Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \"Sirah Nabawiyah\",\r\n    \"Description\":\"Dengan mengenal akhlak dan perilaku serta mengetahui sejarah dari Rasulullah dapat menambahkan kecintaan kita kepada suri tauladan kita\",\r\n    \"Price\": 75000,\r\n    \"Discount\": 25,\r\n    \"Rating\": 8\r\n}"
+				},
+				"url": {
+					"raw": "https://api.iamrisk.my.id/v1/books",
+					"protocol": "https",
+					"host": [
+						"api",
+						"iamrisk",
+						"my",
+						"id"
+					],
+					"path": [
+						"v1",
+						"books"
+					]
+				},
+				"description": "Insert new book to database"
+			},
+			"response": [
+				{
+					"name": "Add New Book",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Title\": \"Sirah Nabawiyah\",\r\n    \"Description\":\"Dengan mengenal akhlak dan perilaku serta mengetahui sejarah dari Rasulullah dapat menambahkan kecintaan kita kepada suri tauladan kita\",\r\n    \"Price\": 75000,\r\n    \"Discount\": 25,\r\n    \"Rating\": 8\r\n}"
+						},
+						"url": {
+							"raw": "https://api.iamrisk.my.id/v1/books",
+							"protocol": "https",
+							"host": [
+								"api",
+								"iamrisk",
+								"my",
+								"id"
+							],
+							"path": [
+								"v1",
+								"books"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 17 Mar 2022 15:34:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=DkGNiep6ka%2Fy5wkLJ2nihdHYd7QiwJ8Rmce%2F%2Bg45EV7djByxazXpR%2BaiNc2sSpM7kWs8jVnxjg7Lfpn2klH0Yn44o5jz6ZIOiyglq4jLXv2TijETSvfOCFnjpWZO1mS%2FbV0ZLg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "6ed6cb59baf8497b-SIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"ID\": 4,\n        \"Title\": \"Sirah Nabawiyah\",\n        \"Description\": \"Dengan mengenal akhlak dan perilaku serta mengetahui sejarah dari Rasulullah dapat menambahkan kecintaan kita kepada suri tauladan kita\",\n        \"Price\": 75000,\n        \"Discount\": 25,\n        \"Rating\": 8,\n        \"CreatedAt\": \"2022-03-17T15:34:43.493449616Z\",\n        \"UpdatedAt\": \"2022-03-17T15:34:43.493449616Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Data for Specified Book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"Title\": \"Mulia Dengan Manhaj Salaf\",\r\n      \"Description\": \"Rekomendasi untuk kamu yang ingin belajar agama\",\r\n      \"Price\": 95000,\r\n      \"Discount\": 30,\r\n      \"Rating\": 9\r\n    }"
+				},
+				"url": {
+					"raw": "https://api.iamrisk.my.id/v1/books/1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"iamrisk",
+						"my",
+						"id"
+					],
+					"path": [
+						"v1",
+						"books",
+						"1"
+					]
+				},
+				"description": "Change value of book data for specified id"
+			},
+			"response": [
+				{
+					"name": "Update Data for Specified Book",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"Title\": \"Mulia Dengan Manhaj Salaf\",\r\n      \"Description\": \"Rekomendasi untuk kamu yang ingin belajar agama\",\r\n      \"Price\": 95000,\r\n      \"Discount\": 30,\r\n      \"Rating\": 9\r\n    }"
+						},
+						"url": {
+							"raw": "https://api.iamrisk.my.id/v1/books/1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"iamrisk",
+								"my",
+								"id"
+							],
+							"path": [
+								"v1",
+								"books",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 17 Mar 2022 15:40:42 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=IUrEiRgiYd7IlJD1tmowPD%2B3is6MMpZ5aqUunMCzSIibdieXDNweB6%2FBtOsl0YVRthp8iZK8i7drOair90WAo0Rw0KKAvT2eqmdrtRr6qb68n5B116TJez5X7TJaQGUb7Rvn5Q%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "6ed6d41fc9f7497b-SIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"ID\": 1,\n        \"Title\": \"Mulia Dengan Manhaj Salaf\",\n        \"Description\": \"Rekomendasi untuk kamu yang ingin belajar agama\",\n        \"Price\": 95000,\n        \"Discount\": 30,\n        \"Rating\": 9,\n        \"CreatedAt\": \"2022-03-17T09:19:33.214653Z\",\n        \"UpdatedAt\": \"2022-03-17T15:40:42.881591506Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Specified Book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.iamrisk.my.id/v1/books/4",
+					"protocol": "https",
+					"host": [
+						"api",
+						"iamrisk",
+						"my",
+						"id"
+					],
+					"path": [
+						"v1",
+						"books",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Specified Book",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://api.iamrisk.my.id/v1/books/4",
+							"protocol": "https",
+							"host": [
+								"api",
+								"iamrisk",
+								"my",
+								"id"
+							],
+							"path": [
+								"v1",
+								"books",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 17 Mar 2022 15:42:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=U1kqidb3IU6fj0HiIlDEy78II4uAHHqfwDEp2r4BOQpp2VQGds7mF7U1lK2z59xesM1bmx%2BnSEhi66i%2B%2BmJJE3jLErwcRqNK8emxBc5vODRudARz1nWqS9oVIpJ6J0YYRYXN2g%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "6ed6d6ad4f81497b-SIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"title\": \"Sirah Nabawiyah\",\n        \"description\": \"Dengan mengenal akhlak dan perilaku serta mengetahui sejarah dari Rasulullah dapat menambahkan kecintaan kita kepada suri tauladan kita\",\n        \"price\": 75000,\n        \"discount\": 25,\n        \"rating\": 8,\n        \"discountPrice\": 56250\n    }\n}"
+				}
+			]
+		}
+	]
+}

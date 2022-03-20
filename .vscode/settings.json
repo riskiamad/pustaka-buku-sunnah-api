@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "ls-4ada8f53e189d960ae933450546a19e8b1392131.cadoav7mk1ht.ap-southeast-1.rds.amazonaws.com",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "achmadrizky_postgre",
+            "database": "achmadrizky_belajargo",
+            "username": "kodingworks",
+            "password": "yy:E19EIL-vJN1#}Y*k4(JpgRpew|=5O"
+        }
+    ]
+}
